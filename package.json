@@ -1,0 +1,19 @@
+{
+    "type": "module",
+    "scripts": {
+        "watch": "tsc -w",
+        "dev": "nodemon dist/index.js"
+    },
+    "dependencies": {
+        "chalk": "^5.0.1"
+    },
+    "devDependencies": {
+        "@types/node": "^18.7.23",
+        "nodemon": "^2.0.20"
+    },
+    "nodemonConfig": {
+        "events": {
+            "start": "clear"
+        }
+    }
+}
