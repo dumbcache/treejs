@@ -15,7 +15,7 @@ const colors = [
 const rand = () => Math.round(Math.random() * (colors.length - 1));
 const initColor = colors[rand()];
 
-export const readFiles = async (readFrom: string): Promise<string[][]> => {
+const readFiles = async (readFrom: string): Promise<string[][]> => {
     const files = await fs.readdir(readFrom);
     const dirs: string[] = [],
         fls: string[] = [];
@@ -82,7 +82,3 @@ export const fileTree = (readFrom: string) => {
     console.log(initColor(readFrom));
     readFilesInternal(readFrom);
 };
-
-const readFrom = "/home/dumbcache/Desktop";
-fileTree(readFrom);
-readFiles(readFrom);
